@@ -1,0 +1,23 @@
+[
+  {
+    "objectID": "lectures/day_01.html",
+    "href": "lectures/day_01.html",
+    "title": "Lecture 01: Introduction to Signals",
+    "section": "",
+    "text": "Today we define signal energy and power."
+  },
+  {
+    "objectID": "lectures/day_01.html#overview",
+    "href": "lectures/day_01.html#overview",
+    "title": "Lecture 01: Introduction to Signals",
+    "section": "",
+    "text": "Today we define signal energy and power."
+  },
+  {
+    "objectID": "lectures/day_01.html#mathematical-definition",
+    "href": "lectures/day_01.html#mathematical-definition",
+    "title": "Lecture 01: Introduction to Signals",
+    "section": "Mathematical Definition",
+    "text": "Mathematical Definition\nThe energy E_\\infty of a continuous-time signal x(t) is defined as:\nE_\\infty = \\int_{-\\infty}^{\\infty} |x(t)|^2 dt\nIf the energy is finite (0 &lt; E_\\infty &lt; \\infty), we call x(t) an energy signal.\n\nPractice Task\n\nCalculate the energy of a unit step function u(t).\nDetermine if the signal is power or energy dominant."
+  }
+]
