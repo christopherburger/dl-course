@@ -4,6 +4,7 @@ project:
 
 website:
   title: "Programming for Engineers and Scientists"
+  site-url: "https://christopherburger.github.io/dl-course/"
   sidebar:
     style: "floating"
     contents:
