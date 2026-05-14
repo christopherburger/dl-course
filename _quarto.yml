@@ -1,6 +1,6 @@
 project:
   type: website
-  output-dir: docs  # Important for GitHub Pages
+  output-dir: docs 
 
 website:
   title: "Programming for Engineers and Scientists"
