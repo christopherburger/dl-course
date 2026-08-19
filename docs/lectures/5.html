@@ -6,9 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="dcterms.date" content="2026-08-20">
 
-<title>Lecture 01: Introduction to Signals – Programming for Engineers and Scientists</title>
+<title>5: Loops – Foundations of Data Science</title>
 <style>
 /* Default styles provided by pandoc.
 ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
@@ -71,51 +70,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@latest/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN" && texText && texText.data) {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../custom.css">
 </head>
@@ -129,9 +84,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">
-      Programming for Engineers and Scientists
-      </li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/1.html">Introduction to Python</a></li><li class="breadcrumb-item"><a href="../lectures/5.html">5: Loops</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -146,7 +99,7 @@ window.Quarto = {
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation floating overflow-auto">
     <div class="pt-lg-2 mt-2 text-left sidebar-header">
     <div class="sidebar-title mb-0 py-0">
-      <a href="../">Programming for Engineers and Scientists</a> 
+      <a href="../">Foundations of Data Science</a> 
     </div>
       </div>
         <div class="mt-2 flex-shrink-0 align-items-center">
@@ -166,8 +119,11 @@ window.Quarto = {
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">index.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Course Overview</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../conventions.html" class="sidebar-item-text sidebar-link">
@@ -179,18 +135,95 @@ window.Quarto = {
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
             <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
- <span class="menu-text">Lectures</span></a>
+ <span class="menu-text">Introduction to Python</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
- <span class="menu-text">lectures/day-01.qmd</span>
-  </li>
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/1.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">1: The Python Environment, Variables and Data Types</span></a>
+  </div>
+</li>
           <li class="sidebar-item">
- <span class="menu-text">lectures/day-02.qmd</span>
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/2.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">2: Fundamental Data Structures</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/3.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">3: Functions</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/4.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">4: Boolean Logic and Control Flow</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/5.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">5: Loops</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/6.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">6: Objects and Classes</span></a>
+  </div>
+</li>
+      </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true">
+ <span class="menu-text">Applications</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/plotting.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">7: Plotting and Visualization</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/pandas_intro.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">9: Introduction to Pandas</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/pandas_grouping.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10: Aggragation, Grouping and Merging</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/numpy_vectors.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">10: NumPy and Vectors</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/numpy_matrices.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">11: NumPy and Matrices</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../lectures/similarity.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">12: Distance and Similarity</span></a>
+  </div>
+</li>
       </ul>
   </li>
     </ul>
@@ -203,20 +236,16 @@ window.Quarto = {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
-  <li><a href="#mathematical-definition" id="toc-mathematical-definition" class="nav-link" data-scroll-target="#mathematical-definition">Mathematical Definition</a>
-  <ul class="collapse">
-  <li><a href="#practice-task" id="toc-practice-task" class="nav-link" data-scroll-target="#practice-task">Practice Task</a></li>
-  </ul></li>
+  <li><a href="#section" id="toc-section" class="nav-link active" data-scroll-target="#section"></a></li>
   </ul>
 </nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../lectures/1.html">Introduction to Python</a></li><li class="breadcrumb-item"><a href="../lectures/5.html">5: Loops</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Lecture 01: Introduction to Signals</h1>
+<h1 class="title">5: Loops</h1>
 </div>
 
 
@@ -224,12 +253,6 @@ window.Quarto = {
 <div class="quarto-title-meta">
 
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">August 20, 2026</p>
-    </div>
-  </div>
   
     
   </div>
@@ -239,24 +262,10 @@ window.Quarto = {
 </header>
 
 
-<section id="overview" class="level2">
-<h2 class="anchored" data-anchor-id="overview">Overview</h2>
-<p>Today we define signal energy and power.</p>
-</section>
-<section id="mathematical-definition" class="level2">
-<h2 class="anchored" data-anchor-id="mathematical-definition">Mathematical Definition</h2>
-<p>The energy <span class="math inline">E_\infty</span> of a continuous-time signal <span class="math inline">x(t)</span> is defined as:</p>
-<p><span class="math display">E_\infty = \int_{-\infty}^{\infty} |x(t)|^2 dt</span></p>
-<p>If the energy is finite (<span class="math inline">0 &lt; E_\infty &lt; \infty</span>), we call <span class="math inline">x(t)</span> an <strong>energy signal</strong>.</p>
-<section id="practice-task" class="level3">
-<h3 class="anchored" data-anchor-id="practice-task">Practice Task</h3>
-<ul>
-<li>Calculate the energy of a unit step function <span class="math inline">u(t)</span>.</li>
-<li>Determine if the signal is power or energy dominant.</li>
-</ul>
+<section id="section" class="level2">
+<h2 class="anchored" data-anchor-id="section"></h2>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->
