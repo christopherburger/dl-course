@@ -3,7 +3,7 @@ project:
   output-dir: docs 
 
 website:
-  title: "Programming for Engineers and Scientists"
+  title: "Foundations of Data Science"
   sidebar:
     style: "floating"
     contents:
@@ -11,10 +11,22 @@ website:
         contents:
           - index.qmd
           - conventions.qmd
-      - section: "Lectures"
+      - section: "Introduction to Python"
         contents:
-          - lectures/day-01.qmd
-          - lectures/day-02.qmd
+          - lectures/1.qmd
+          - lectures/2.qmd
+          - lectures/3.qmd
+          - lectures/4.qmd
+          - lectures/5.qmd
+          - lectures/6.qmd
+      - section: "Applications"
+        contents:
+          - lectures/plotting.qmd
+          - lectures/pandas_intro.qmd
+          - lectures/pandas_grouping.qmd
+          - lectures/numpy_vectors.qmd
+          - lectures/numpy_matrices.qmd
+          - lectures/similarity.qmd
 
 format:
   html:
